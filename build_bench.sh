@@ -10,7 +10,7 @@ LD_FIAT="fiat/install_nvidia/lib64/ -lfiat"
 
 NVF="nvfortran -O2 -acc=gpu -I$INC_PAR -I$INC_FIAT -L$LD_FIAT"
 
-for name in contiguous not-contiguous; do
+for name in contiguous mostly-contiguous not-contiguous; do
 	#v0.2.2
 	echo "Building $name v0.2.2"
 	LD_FA=install_field_api/lib64/
