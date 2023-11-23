@@ -15,7 +15,7 @@ export LD_LIBRARY_PATH=/opt/softs/nvidia/hpc_sdk/Linux_x86_64/23.9/cuda/12.2/ext
 echo "#all time in ms" > res.csv
 echo "v0.2.2, pinning, lukas" >> res.csv
 
-for name in owner contiguous mostly-contiguous not-contiguous; do
+for name in ping-pong owner contiguous mostly-contiguous not-contiguous; do
 	for version in v0.2.2 pinning lukas; do 
 		echo "Bench $name $version"
 		$NVPROF ./bench_${name}_${version} &> log_${name}_${version}.csv
