@@ -2,7 +2,8 @@
 
 ROOT=$PWD
 
-module load nvhpc/23.9
+source env.sh
+load_env
 
 INC_FIAT=fiat/install_nvidia/module/fiat/
 INC_PAR=fiat/install_nvidia/module/parkind_dp/

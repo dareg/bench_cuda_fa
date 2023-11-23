@@ -1,6 +1,7 @@
 #!/bin/bash
 
-module load nvhpc/23.9
+source env.sh
+load_env
 
 case $HOSTNAME in 
 	(belenosndl* | taranisndl*) ;;

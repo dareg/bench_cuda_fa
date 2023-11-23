@@ -3,17 +3,7 @@
 set -x
 ROOT=$PWD
 
-function env_common(){
-module load cmake/3.24.1
-module load git
-module load python/3.7.6
-}
-
-function env_nvidia(){
-module purge
-env_common
-module load nvhpc/23.9
-}
+source env.sh
 
 function fiat(){
 cd "$ROOT/fiat" || exit 1
@@ -73,7 +63,7 @@ make -j
 make install
 }
 
-env_nvidia
+load_env
 git clone https://github.com/ecmwf-ifs/fiat
 fiat nvidia
 field_api
