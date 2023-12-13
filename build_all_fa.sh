@@ -34,7 +34,7 @@ make install
 
 function field_api_pinning(){
 cd $ROOT
-git clone https://github.com/ecmwf-ifs/field_api field_api_pinning
+git clone --branch naan-cuda https://github.com/ecmwf-ifs/field_api field_api_pinning
 cd "$ROOT/field_api_pinning" || exit 1
 BUILD_DIR="build"
 FIAT_INSTALL_DIR="$ROOT/fiat/install_nvidia"
