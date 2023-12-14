@@ -23,7 +23,7 @@ for name in ping-pong owner contiguous mostly-contiguous not-contiguous; do
 	echo "Building $name pinning"
 	LD_FA=install_pinning/lib64/
 	INC_FA=install_pinning/include/field_api_dp/ 
-	$NVF -cuda $name.F90 -I$INC_FA  -L$LD_FA -lfield_api_dp
+	$NVF -DPIN -cuda -gpu=pinned $name.F90 -I$INC_FA  -L$LD_FA -lfield_api_dp
 	mv a.out "bench_${name}_pinning"
 
 	#lukas
