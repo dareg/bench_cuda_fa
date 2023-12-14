@@ -1,10 +1,10 @@
-Pour tester:
+In order to tets on belenos or taranis:
 
 ./build_all_fa.sh
 
 ./build_bench.sh
 
-Se connecter à un noeud gpu
+Connect to a gpu node
 
 ./run_bench.sh
 
